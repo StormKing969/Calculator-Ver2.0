@@ -1,0 +1,40 @@
+<!-- Import the header section -->
+<%- include("partials/header"); %>
+
+<section class="calculator_container">
+    <form action="/" method="post" class="calculator" name="calc">
+        <input type="text" class="value" name="result" value="<%= calculatedOutput %>">
+
+        <span class="btn" onclick="calc.result.value=''">AC</span>
+        <span class="btn" onclick="calc.result.value+='+/-'">+/-</span>
+        <span class="btn" onclick="calc.result.value+='%'">%</span>
+        <span class="btn" onclick="calc.result.value+='/'">/</span>
+
+
+        <span class="btn" onclick="calc.result.value+='7'">7</span>
+        <span class="btn" onclick="calc.result.value+='8'">8</span>
+        <span class="btn" onclick="calc.result.value+='9'">9</span>
+        <span class="btn" onclick="calc.result.value+='X'">X</span>
+        
+
+        <span class="btn" onclick="calc.result.value+='4'">4</span>
+        <span class="btn" onclick="calc.result.value+='5'">5</span>
+        <span class="btn" onclick="calc.result.value+='6'">6</span>
+        <span class="btn" onclick="calc.result.value+='-'">-</span>
+
+    
+        <span class="btn" onclick="calc.result.value+='1'">1</span>
+        <span class="btn" onclick="calc.result.value+='2'">2</span>
+        <span class="btn" onclick="calc.result.value+='3'">3</span>
+        <span class="btn" onclick="calc.result.value+='+'">+</span>
+
+    
+        <span class="btn" onclick="calc.result.value+='0'">0</span>
+        <span class="btn" onclick="calc.result.value+='.'">.</span>
+              
+        <button type="submit" name="submit">=</button>
+    </form>
+</section>
+
+<!-- Import the footer section -->
+<%- include("partials/footer"); %>
