@@ -4,6 +4,10 @@ const ejs = require("ejs");
 
 const port = process.env.PORT || 3000;
 
+
+// importing local module
+const calculate = require(__dirname + "/logic.js");
+
 const app = express();
 
 // needed to use EJS
@@ -27,19 +31,7 @@ app.get("/", function(req, res) {
 app.post("/", function(req, res) {
     let display = req.body.result;
 
-    let multiply = /X/;
-    // let percentage = /%/;
-
-    if(multiply.test(display) === true) {
-        display = display.replace(multiply, "*");
-    }
-
-    // if(percentage.test(display) === true) {
-    //     display = display.replace(percentage, "");
-    //     display = display;
-    // }
- 
-    result = eval(display);
+    result = calculate(display);
 
     res.redirect("/");
 })
