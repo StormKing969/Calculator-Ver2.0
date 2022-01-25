@@ -51,6 +51,9 @@ body {
   height: 6.25rem;
   width: 100%;
   border: none;
+  outline: none;
   text-align: center;
+  background: #FFF;
+  border-radius: 1rem;
 }
 /*# sourceMappingURL=main.css.map */
