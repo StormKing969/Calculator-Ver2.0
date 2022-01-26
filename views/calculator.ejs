@@ -5,9 +5,13 @@
     <form action="/" method="post" class="calculator" name="calc">
         <input type="text" class="value" name="result" value="<%= calculatedOutput %>">
 
-        <span class="btn" onclick="calc.result.value=''">AC</span>
-        <!-- <span class="btn" onclick="calc.result.value+='+/-'">+/-</span> -->
-        <!-- <span class="btn" onclick="calc.result.value+='%'">%</span> -->
+        <span class="btn clear" onclick="calc.result.value=''">AC</span>
+        <!-- <span class="btn" onclick="calc.result.value+='+/-'">+/-</span>
+        <span class="btn" onclick="calc.result.value+='%'">%</span> -->
+
+        <button class="btn" type="submit" name="signChange" formaction="/signChange">+/-</button>
+        <button class="btn" type="submit" name="percentage" formaction="/percentage">%</button>
+
         <span class="btn" onclick="calc.result.value+='/'">/</span>
 
 
@@ -30,10 +34,9 @@
 
     
         <span class="btn" onclick="calc.result.value+='0'">0</span>
-        <span class="btn" onclick="calc.result.value+='00'">00</span>
         <span class="btn" onclick="calc.result.value+='.'">.</span>
               
-        <button type="submit" name="submit">=</button>
+        <button class="btn equal" type="submit" name="submit">=</button>
     </form>
 </section>
 

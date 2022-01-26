@@ -1,3 +1,7 @@
+footer {
+  margin-top: 5rem;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -24,6 +28,10 @@ body {
   background: #333;
 }
 
+button {
+  border: none;
+}
+
 .calculator_container {
   position: relative;
   min-width: 300px;
@@ -33,10 +41,6 @@ body {
   border-radius: 1.56rem;
   -webkit-box-shadow: 0.313rem 0.313rem 0.313rem 0 rgba(0, 0, 0, 0.25), inset 0.313rem 0.313rem 0.978rem 0 rgba(0, 0, 0, 0.25), inset 0 0 1.12rem 0 rgba(0, 0, 0, 0.5);
           box-shadow: 0.313rem 0.313rem 0.313rem 0 rgba(0, 0, 0, 0.25), inset 0.313rem 0.313rem 0.978rem 0 rgba(0, 0, 0, 0.25), inset 0 0 1.12rem 0 rgba(0, 0, 0, 0.5);
-}
-
-.btn {
-  color: #FFF;
 }
 
 .calculator {
@@ -52,8 +56,59 @@ body {
   width: 100%;
   border: none;
   outline: none;
-  text-align: center;
+  text-align: right;
   background: #FFF;
   border-radius: 1rem;
+  margin-bottom: 1rem;
+  -webkit-box-shadow: 0 0 0 0.125rem rgba(0, 0, 0, 0.75);
+          box-shadow: 0 0 0 0.125rem rgba(0, 0, 0, 0.75);
+  font-size: 2rem;
+  padding: .625rem;
+}
+
+.calculator .btn {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #FFF;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  width: 5rem;
+  height: 5rem;
+  margin: .5rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.75)), to(#333));
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.75), #333);
+  -webkit-box-shadow: 0.313rem 0.313rem 0.313rem 0 rgba(0, 0, 0, 0.25), inset 0.313rem 0.313rem 0.978rem 0 rgba(0, 0, 0, 0.25), inset 0 0 1.12rem 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0.313rem 0.313rem 0.313rem 0 rgba(0, 0, 0, 0.25), inset 0.313rem 0.313rem 0.978rem 0 rgba(0, 0, 0, 0.25), inset 0 0 1.12rem 0 rgba(0, 0, 0, 0.5);
+  border-radius: 1.56rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  border: 1px #646464 solid;
+}
+
+.calculator .btn:hover {
+  background: #646464;
+}
+
+.calculator .equal {
+  width: 10rem;
+  background: #afafaf;
+  grid-column: span 2;
+}
+
+.calculator .clear {
+  background: #afafaf;
 }
 /*# sourceMappingURL=main.css.map */
